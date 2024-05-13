@@ -1,0 +1,12 @@
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\bin\Debug\net6.0\Project.Infrastructure.deps.json
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\bin\Debug\net6.0\Project.Infrastructure.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\bin\Debug\net6.0\Project.Infrastructure.pdb
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.AssemblyInfo.cs
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.sourcelink.json
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\refint\Project.Infrastructure.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.pdb
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\ref\Project.Infrastructure.dll

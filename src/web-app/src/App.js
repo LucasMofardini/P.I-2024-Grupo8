@@ -1,10 +1,22 @@
 import './App.css';
+import Box from '@mui/material/Box'
+import NavBar from './NavBar';
+import Footer from './Footer'
+import ProjectContainer from './ProjectContainer'; 
 
 function App() {
   return (
-    <div className="App">
-      <h1> Controle Financeiro por Projeto </h1>
-    </div>
+    <>
+      <NavBar />
+
+      <Box sx={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+        <Box sx={{ width: '1024px'}}>
+            <ProjectContainer/>
+          </Box>
+      </Box>
+
+      <Footer />
+    </>
   );
 }
 
