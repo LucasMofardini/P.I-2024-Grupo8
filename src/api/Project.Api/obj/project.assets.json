@@ -177,11 +177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\api\\api.csproj",
-      "projectName": "api",
-      "projectPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Api\\Project.Api.csproj",
+      "projectName": "Project.Api",
+      "projectPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Api\\Project.Api.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\api\\obj\\",
+      "outputPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
