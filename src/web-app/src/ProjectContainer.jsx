@@ -39,9 +39,9 @@ const Project = ({ project }) => {
         console.log(calendarDate)
         console.log(typeof calendarDate)
         console.table(calendarDate)
-        console.log(calendarDate['$d'])
-        console.log(new Date(calendarDate['$d']).getMonth())
-    },[calendarDate]);
+        // console.log(calendarDate['$d'])
+/*         console.log(new Date(calendarDate['$d']).getMonth())
+ */    },[calendarDate]);
 
     return (
       <Container
@@ -75,9 +75,14 @@ const Project = ({ project }) => {
 const ProjectHeader = ({ name, budget }) => {
     // Descobrir como colocar formato de currency (gabriel e jovi)
 
+    let BRCurrency = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL', 
+  });
+
     return(
         <Box sx={{ display: 'flex', justifyContent: 'flex-end'}}>
-            <Typography>Projeto {name} - {budget}</Typography>
+            <Typography>Projeto {name} - {BRCurrency.format(budget)}</Typography>
         </Box>
     )
 }
