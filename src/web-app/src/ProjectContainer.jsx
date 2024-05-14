@@ -1,90 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Typography } from '@mui/material';
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
-import ptbr from 'dayjs/locale/pt-br';
-import { ptBR } from '@mui/x-date-pickers/locales';
-import dayjs from 'dayjs';
+import React, { useState, useEffect } from "react";
+import Toolbar from "@mui/material/Toolbar";
+import Project from "./Components/Project/Project";
+import AddProjectButton from "./Components/Buttons/AddProjectButton";
+import NewProjectModal from "./Components/Modals/NewProjectModal";
 
-const projectsDefault = [{
+const projectsDefault = [
+  {
     id: 1,
-    name: 'São Paulo',
-    budget: 50000.00
-}]
+    name: "São Paulo",
+    budget: 50000.0,
+  },
+];
+
+const newProjectDefault = {
+  name: '',
+  budget: null
+}
 
 const ProjectContainer = () => {
-    const [projects, setProjects] = useState(projectsDefault);
+  const [projects, setProjects] = useState(projectsDefault);
 
-    return (
-      <>
-        <Toolbar sx={{ marginTop: "10px" }} />
-        {!!projects.length &&
-          projects.map((project, key) => {
-            return <Project key={key} project={project} />;
-          })}
-      </>
-    );
+  const [newProjectModal, setNewProjectModal] = useState(newProjectDefault);
+  const [showModal, setShowModal] = useState(false);
 
-}
+  const toggleModal = () => setShowModal(prevState => !prevState);
 
-const Project = ({ project }) => {
-    const { name, budget } = project;
+  
+  const handleChange = (e) => {
+    setNewProjectModal((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  
+  const onCreateNewProject = () => {
+    setProjects((prevState) => [
+      ...prevState,
+      {
+        name: newProjectModal.name,
+        budget: newProjectModal.budget,
+      }
+    ]);
+  };
 
-    const [calendarDate, setCalendarDate] = useState();
-    
-    useEffect(() => {
-        console.log(calendarDate)
-        console.log(typeof calendarDate)
-        console.table(calendarDate)
-        // console.log(calendarDate['$d'])
-/*         console.log(new Date(calendarDate['$d']).getMonth())
- */    },[calendarDate]);
+  return (
+    <>
+      {!!projects.length &&
+        projects.map((project, key) => <Project key={key} project={project} />)}
 
-    return (
-      <Container
-        maxWidth
-        sx={{
-          background: "#e9bebe;",
-          border: "1px solid black",
-        }}
-      >
-        <ProjectHeader name={name} budget={budget} />
+      <AddProjectButton onClick={toggleModal} />
 
-        <Box>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DateCalendar
-              value={calendarDate}
-              onChange={(newValue) => setCalendarDate(newValue)}
-              adapterLocale={ptbr}
-              localeText={
-                ptBR.components.MuiLocalizationProvider.defaultProps.localeText
-              }
-              defaultValue={dayjs("2024-05-12")}
-            />
-          </LocalizationProvider>
+      <NewProjectModal
+        open={showModal}
+        info={newProjectModal}
+        handleChange={handleChange}
+        handleClose={toggleModal}
+        onSend={onCreateNewProject}
+      />
+    </>
+  );
+};
 
-          {/* <Typography>{calendarDate && calendarDate.$d}</Typography> */}
-        </Box>
-      </Container>
-    );
-}
 
-const ProjectHeader = ({ name, budget }) => {
-    // Descobrir como colocar formato de currency (gabriel e jovi)
 
-    let BRCurrency = new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL', 
-  });
 
-    return(
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end'}}>
-            <Typography>Projeto {name} - {BRCurrency.format(budget)}</Typography>
-        </Box>
-    )
-}
+
 
 export default ProjectContainer;

@@ -1,7 +1,7 @@
 import './App.css';
 import Box from '@mui/material/Box'
-import NavBar from './NavBar';
-import Footer from './Footer'
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer'
 import ProjectContainer from './ProjectContainer'; 
 
 function App() {
