@@ -65,16 +65,17 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             value={description}
           />
   
-          <FormControl fullWidth sx={{ m: 1 }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Valor</InputLabel>
+          <FormControl fullWidth sx={{ s: 1,marginTop:1 }}>
+          <InputLabel htmlFor="outlined-adornment-amount">Valor R$</InputLabel>
             {/* Arrumar a caixa de valor*/}
             {/* Validar para deixar colocar apenas valores numericos */}
             <OutlinedInput
+              type="number"
               fullWidth
               id="outlined-adornment-amount"
-              startAdornment={
-                <InputAdornment position="start">R$</InputAdornment>
-              }
+              // startAdornment={
+              //   <InputAdornment position="start">R$</InputAdornment>
+              // }
               label="Amount"
               name="amount"
               onChange={handleChange}
