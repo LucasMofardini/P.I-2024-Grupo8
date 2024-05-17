@@ -8,10 +8,9 @@ import Link from "@mui/material/Link"
 const styleBox = {
   width: "100%",
   height: "auto",
-  backgroundColor: "green",
   paddingTop: "0.5rem",
   paddingBottom: "0.5rem",
-  position: "absolute",
+  position: "fixed",
   bottom: "0",
 };
 
@@ -28,7 +27,7 @@ const Footer = () => {
               target='_blank'
             >
               <Typography color="black" variant="h7">
-                GitHub
+                @GitHub
               </Typography>
             </Link>
           </Grid>
