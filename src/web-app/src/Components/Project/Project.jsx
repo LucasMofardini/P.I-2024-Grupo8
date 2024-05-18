@@ -30,6 +30,12 @@ const Project = ({ project }) => {
   
     const onSend = () => {
       console.log(spentModal)
+
+      const amount = spentModal.amount
+      let amountFormat = amount.replace(/\./g,"")
+      amountFormat = amountFormat.replace(",", ".")
+      console.log(amountFormat)
+
     }
   
     return (

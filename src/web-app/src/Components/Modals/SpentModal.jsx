@@ -8,12 +8,18 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
 import * as utils from '../../Utils/generic';
+import { NumericFormat } from 'react-number-format';
+
+const sharedStyles = {
+  mt: 1.5,
+  
+}
+
 
 const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) => {
     const { open, category, description, amount } = modal;
-  
+
     return (
       <Modal
         open={open}
@@ -30,13 +36,13 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             width: 400,
             bgcolor: "background.paper",
             border: "2px solid #000",
-            boxShadow: 24,
             p: 4,
+            borderRadius: 3
           }}
         >
-          <Typography variant="h4">{utils.dateFormat(calendarDate)}</Typography>
+          <Typography variant="h7">{utils.dateFormat(calendarDate)}</Typography>
           
-          <FormControl fullWidth>
+          <FormControl fullWidth sx={{ ...sharedStyles  }}>
             <InputLabel id="category-label">Categoria</InputLabel>
             <Select
               labelId="category-label"
@@ -52,6 +58,25 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             </Select>
           </FormControl>
   
+          
+
+          <FormControl fullWidth sx={{ ...sharedStyles  }}>
+            <NumericFormat
+              customInput={TextField}
+              thousandSeparator="."
+              prefix="R$"
+              decimalScale={2}
+              decimalSeparator=","
+              variant="outlined"
+              fullWidth
+              id="outlined-adornment-amount"
+              label="Valor"
+              name="amount"
+              onChange={handleChange}
+              value={amount}
+            />
+          </FormControl>
+
           <TextField
             fullWidth
             multiline
@@ -60,28 +85,11 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             label="Descrição"
             variant="outlined"
             name="description"
-            sx={{ mt: "10px" }}
+            sx={ {...sharedStyles}  }
+            
             onChange={handleChange}
             value={description}
           />
-  
-          <FormControl fullWidth sx={{ s: 1,marginTop:1 }}>
-          <InputLabel htmlFor="outlined-adornment-amount">Valor R$</InputLabel>
-            {/* Arrumar a caixa de valor*/}
-            {/* Validar para deixar colocar apenas valores numericos */}
-            <OutlinedInput
-              type="number"
-              fullWidth
-              id="outlined-adornment-amount"
-              // startAdornment={
-              //   <InputAdornment position="start">R$</InputAdornment>
-              // }
-              label="Amount"
-              name="amount"
-              onChange={handleChange}
-              value={amount}
-            />
-          </FormControl>
   
           <Button onClick={onSend}>Salvar</Button>
         </Box>
