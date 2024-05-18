@@ -32,7 +32,7 @@ const Project = ({ project }) => {
       console.log(spentModal)
 
       const amount = spentModal.amount
-      let amountFormat = amount.replace(/\./g,"")
+      let amountFormat = amount.replace(/[^0-9\,-]+/g,"")
       amountFormat = amountFormat.replace(",", ".")
       console.log(amountFormat)
 
