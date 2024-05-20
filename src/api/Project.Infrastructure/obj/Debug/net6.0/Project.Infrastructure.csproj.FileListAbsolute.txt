@@ -10,3 +10,7 @@ C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\refint\Project.Infrastructure.dll
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.pdb
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\ref\Project.Infrastructure.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\bin\Debug\net6.0\Project.Domain.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\bin\Debug\net6.0\Project.Domain.pdb
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Infrastructure\obj\Debug\net6.0\Project.Infrastructure.csproj.CopyComplete

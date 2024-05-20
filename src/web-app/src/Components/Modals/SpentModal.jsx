@@ -35,7 +35,7 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
           }}
         >
           <Typography variant="h4">{utils.dateFormat(calendarDate)}</Typography>
-          
+
           <FormControl fullWidth>
             <InputLabel id="category-label">Categoria</InputLabel>
             <Select
@@ -51,7 +51,7 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
               <MenuItem value={4}>Produtos</MenuItem>
             </Select>
           </FormControl>
-  
+
           <TextField
             fullWidth
             multiline
@@ -64,25 +64,23 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             onChange={handleChange}
             value={description}
           />
-  
-          <FormControl fullWidth sx={{ s: 1,marginTop:1 }}>
-          <InputLabel htmlFor="outlined-adornment-amount">Valor R$</InputLabel>
-            {/* Arrumar a caixa de valor*/}
-            {/* Validar para deixar colocar apenas valores numericos */}
+
+          <FormControl fullWidth sx={{ s: 1, marginTop: 1 }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Valor</InputLabel>
             <OutlinedInput
               type="number"
               fullWidth
-              id="outlined-adornment-amount"
-              // startAdornment={
-              //   <InputAdornment position="start">R$</InputAdornment>
-              // }
+              // id="outlined-adornment-amount"
+              startAdornment={
+                <InputAdornment position="start">R$</InputAdornment>
+              }
               label="Amount"
               name="amount"
               onChange={handleChange}
               value={amount}
             />
           </FormControl>
-  
+
           <Button onClick={onSend}>Salvar</Button>
         </Box>
       </Modal>

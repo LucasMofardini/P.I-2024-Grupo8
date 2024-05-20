@@ -15,11 +15,11 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
     const { name, budget } = info;
     
     return (
-        <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
         <Box
           sx={{
@@ -35,7 +35,7 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
           }}
         >
           <Typography variant="h4">Novo Projeto</Typography>
-  
+
           <TextField
             fullWidth
             multiline
@@ -48,7 +48,7 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
             onChange={handleChange}
             value={name}
           />
-  
+
           <FormControl fullWidth sx={{ m: 1 }}>
             <InputLabel htmlFor="outlined-adornment-amount">Valor</InputLabel>
             <OutlinedInput
@@ -63,11 +63,11 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
               value={budget}
             />
           </FormControl>
-  
+
           <Button onClick={onSend}>Salvar</Button>
         </Box>
       </Modal>
-    )
+    );
 }
 
 export default NewProjectModal;

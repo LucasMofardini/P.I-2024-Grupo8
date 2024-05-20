@@ -10,3 +10,13 @@ C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\refint\Project.Application.dll
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\Project.Application.pdb
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\ref\Project.Application.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Application.runtimeconfig.json
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\Project.Application.csproj.AssemblyReference.cache
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\Project.Application.genruntimeconfig.cache
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Domain.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Infrastructure.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Domain.pdb
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Infrastructure.pdb
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\obj\Debug\net6.0\Project.Application.csproj.CopyComplete
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Utils.dll
+C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Application\bin\Debug\net6.0\Project.Utils.pdb
