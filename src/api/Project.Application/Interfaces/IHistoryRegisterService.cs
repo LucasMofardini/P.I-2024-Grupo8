@@ -4,5 +4,7 @@ namespace Project.Application.Interfaces;
 
 public interface IHistoryRegisterService
 {
-    public void AddHistoryByCode(string code, HistoryRegisterDTO dto);
+    void AddHistoryByCode(HistoryRegisterDTO dto);
+    void DeleteHistoryById(int id);
+    void UpdateHistory(HistoryRegisterUpdateDTO dto);
 }

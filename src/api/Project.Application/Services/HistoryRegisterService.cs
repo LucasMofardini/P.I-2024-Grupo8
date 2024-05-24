@@ -16,14 +16,14 @@ public class HistoryRegisterService : IHistoryRegisterService
         _context = context;
     }
         
-    public void AddHistoryByCode(string code, HistoryRegisterDTO dto)
+    public void AddHistoryByCode(HistoryRegisterDTO dto)
     {
-        var project = GetProjectByCode(code);
+        var project = GetProjectByCode(dto.ProjectCode);
 
         if (project is null)
-            throw new Exception($"Projeto não encontrado {code}");
+            throw new Exception($"Projeto não encontrado {dto.ProjectCode}");
 
-        var history = new HistoryRegister()
+        var history = new HistoryRegister
         {
             ProjectId = project.Id,
             Amount = dto.Amount,
@@ -36,9 +36,46 @@ public class HistoryRegisterService : IHistoryRegisterService
         _context.HistoryRegister.Add(history);
         _context.SaveChanges();
     }
-    
+
+    public void DeleteHistoryById(int id)
+    {
+        var history = GetHistoryById(id);
+        
+        if (history is null)
+            throw new Exception($"Historico não encontrado | History Id: {id}");
+        
+        _context.HistoryRegister.Remove(history);
+        _context.SaveChanges();
+    }
+
+    public void UpdateHistory(HistoryRegisterUpdateDTO dto)
+    {
+        var history = GetHistoryById(dto.Id);
+
+        if (history is null)
+            throw new Exception("Historico não encontrado");
+        
+        _context.HistoryRegister.Update(new HistoryRegister()
+        {
+            Id = dto.Id,
+            Amount = dto.Amount,
+            Date = dto.Date,
+            Description = dto.Description,
+            CategoryId = dto.CategoryId,
+            ProjectId = dto.ProjectId,
+            LastUpdatedDateTime = TimeUtils.GetBrazilianUtcNow()
+        });
+
+        _context.SaveChanges();
+    }
+
     private Domain.Project? GetProjectByCode(string code)
     {
         return _context.Project.FirstOrDefault(x => x.Code == code);
+    }
+    
+    private HistoryRegister? GetHistoryById(int id)
+    {
+        return _context.HistoryRegister.FirstOrDefault(x => x.Id == id);
     }
 }

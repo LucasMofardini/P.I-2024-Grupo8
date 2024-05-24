@@ -33,22 +33,21 @@ public class ProjectService : IProjectService
         _context.SaveChanges();
     }
 
-    public void UpdateProjectByCode(ProjectDTO dto)
+    public void UpdateProject(ProjectDTO dto)
     {
-        var project = GetProjectByCode(dto.Code);
-
-        if (project is null || project.Code != dto.Code)
-            throw new Exception("Código não encontrado");
-
-        var updateProject = new Domain.Project
+        // var project = GetProjectById(dto.Id);
+        //
+        // if (project is null)
+        //     throw new Exception("Projeto não encontrado");
+        
+        _context.Project.Update(new Domain.Project
         {
-            Id = project.Id,
+            Id = dto.Id,
             Name = dto.Name,
             Budget = dto.Budget,
             Code = dto.Code
-        };
-
-        _context.Project.Update(updateProject);
+        });
+        
         _context.SaveChanges();
     }
 
@@ -56,7 +55,7 @@ public class ProjectService : IProjectService
     {
         return _context.Project.ToList();
     }
-
+    
     public void DeleteProjectByCode(string code)
     {
         var project = GetProjectByCode(code);
@@ -72,6 +71,11 @@ public class ProjectService : IProjectService
         _context.SaveChanges();
     }
 
+    private Domain.Project? GetProjectById(int projectId)
+    {
+        return _context.Project.FirstOrDefault(x => x.Id == projectId);
+    }
+    
     private Domain.Project? GetProjectByCode(string code)
     {
         return _context.Project.FirstOrDefault(x => x.Code == code);

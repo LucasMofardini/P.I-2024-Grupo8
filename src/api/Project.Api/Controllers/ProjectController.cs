@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Project.Application.DTOs;
 using Project.Application.Interfaces;
@@ -28,10 +29,10 @@ public class ProjectController : ControllerBase
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
+            return BadRequest(e.Message);
         }
     }
-
+    
     [HttpGet(Name = "ListProject")]
     public IActionResult ListProjects()
     {
@@ -42,23 +43,23 @@ public class ProjectController : ControllerBase
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
+            return BadRequest(e.Message);
         }
     }
     
-    [HttpPut(Name = "UpdateProjectByCode")]
-    public IActionResult UpdateProjectByCode([FromBody] ProjectDTO dto)
+    [HttpPut(Name = "UpdateProject")]
+    public IActionResult UpdateProject([FromBody] ProjectDTO dto)
     {
         try
         {
-            _projectService.UpdateProjectByCode(dto);
+            _projectService.UpdateProject(dto);
             
             return Ok($"{dto.Name} - Atualizado com Sucesso");
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
+            return BadRequest(e.Message);
         }
     }
     
@@ -74,7 +75,7 @@ public class ProjectController : ControllerBase
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
+            return BadRequest(e.Message);
         }
     }
 }
