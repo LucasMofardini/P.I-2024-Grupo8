@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Project from "./Components/Project/Project";
 import AddProjectButton from "./Components/Buttons/AddProjectButton";

@@ -1,15 +1,13 @@
 import React from 'react';
-import { Button, Container, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
-import * as utils from '../../Utils/generic';
+// import * as utils from '../../Utils/generic';
 
 const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => {
     const { name, budget } = info;

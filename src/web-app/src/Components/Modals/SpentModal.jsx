@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Button, Container, Typography } from "@mui/material";
+import React from "react";
+import { Button, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import InputLabel from '@mui/material/InputLabel';
@@ -7,26 +7,44 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import * as utils from '../../Utils/generic';
 import { NumericFormat } from 'react-number-format';
+import { makeStyles }  from '@mui/styles'
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
+
 
 const sharedStyles = {
   mt: 1.5,
   
 }
 
+const theme = createTheme();
+const useStyles = makeStyles({
+  button: {
+    background: '#344d8c',
+    color: '#fff',
+    '&:hover': {
+      background: '#425c9e',
+      color: '#fff',
+  },
+}})
+
 
 const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) => {
     const { open, category, description, amount } = modal;
 
+    const classes = useStyles();
+
     return (
+
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
+        
         <Box
           sx={{
             position: "absolute",
@@ -40,7 +58,8 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             borderRadius: 3
           }}
         >
-          <Typography variant="h7">{utils.dateFormat(calendarDate)}</Typography>
+          <ThemeProvider theme={theme}>
+          <Typography sx= {{ display: 'flex', justifyContent: 'flex-end' }} variant="h7">{utils.dateFormat(calendarDate)}</Typography>
           
           <FormControl fullWidth sx={{ ...sharedStyles  }}>
             <InputLabel id="category-label">Categoria</InputLabel>
@@ -80,7 +99,7 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
           <TextField
             fullWidth
             multiline
-            minRows={2}
+            minRows={1}
             id="outlined-basic"
             label="Descrição"
             variant="outlined"
@@ -91,9 +110,12 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             value={description}
           />
   
-          <Button onClick={onSend}>Salvar</Button>
+          <Button className={classes.button} fullWidth sx= {{ mt: 4, display: 'flex', justifyContent: 'center' }} onClick={onSend}>Salvar</Button>
+          </ThemeProvider>
         </Box>
+        
       </Modal>
+
     );
   };
 
