@@ -40,10 +40,14 @@ const ProjectContainer = () => {
     try {
       setAlert(alertDefault);
 
+      const budget = newProjectModal.budget
+      let budgetFormat = budget.replace(/[^0-9\,-]+/g,"")
+      budgetFormat = budgetFormat.replace(",", ".")
+
       var res = await postData("/Project", {
         code: newProjectModal.code,
         name: newProjectModal.name,
-        budget: newProjectModal.budget,
+        budget: budgetFormat,
       });
 
       setAlert({ show: true, message: res, severity: "success" });

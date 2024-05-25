@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import * as utils from "../../Utils/generic";
@@ -25,7 +24,7 @@ const History = ({ history }) => {
     <Card variant="outlined" sx={{ overflow: 'initial', margin: '8px 12px !important' }}>
       <CardContent sx={{ py: 0, pt: 1 }}>
         <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
-          <Chip label={CONSTS.category[categoryId]} />
+          <Chip label={CONSTS.categories[categoryId]} />
           <Typography sx={{ fontSize: 14 }}>
             <b>{utils.dateFormat(date)}</b> | {description}
           </Typography>

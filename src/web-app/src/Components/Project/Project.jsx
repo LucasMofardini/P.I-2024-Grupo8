@@ -56,11 +56,15 @@ const Project = ({ project }) => {
 
   const onSend = async () => {
     try {
+      const amount = spentModal.amount
+      let amountFormat = amount.replace(/[^0-9\,-]+/g,"")
+      amountFormat = amountFormat.replace(",", ".")
+      
       var res = await postData("/HistoryRegister", {
         projectCode: code,
         categoryId: spentModal.category,
         description: spentModal.description,
-        amount: spentModal.amount,
+        amount: amountFormat,
         date: utils.formatDateToIso(new Date(calendarDate["$d"])),
       });
 

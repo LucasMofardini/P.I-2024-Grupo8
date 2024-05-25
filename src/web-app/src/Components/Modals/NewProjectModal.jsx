@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import * as utils from '../../Utils/generic';
+import { NumericFormat } from "react-number-format";
 
 const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => {
     const { name, budget, code } = info;
@@ -34,12 +35,17 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
             p: 4,
           }}
         >
-          <Typography variant="h5">Novo Projeto</Typography>
+          <Typography
+            sx={{ display: "flex", justifyContent: "flex-end" }}
+            variant="h7"
+          >
+            Novo Projeto
+          </Typography>
 
           <TextField
             fullWidth
             multiline
-            minRows={2}
+            minRows={1}
             id="outlined-basic"
             label="Nome"
             variant="outlined"
@@ -52,25 +58,27 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
           <TextField
             fullWidth
             multiline
-            minRows={2}
+            minRows={1}
             id="outlined-basic"
             label="Codigo"
             variant="outlined"
             name="code"
-            sx={{ mt: "10px" }}
+            sx={{ mt: 1.5 }}
             onChange={handleChange}
             value={code}
           />
 
-          <FormControl fullWidth sx={{ m: 1 }}>
-            <InputLabel htmlFor="outlined-adornment-amount">Valor</InputLabel>
-            <OutlinedInput
+          <FormControl fullWidth sx={{ mt: 1.5 }}>
+            <NumericFormat
+              customInput={TextField}
+              thousandSeparator="."
+              prefix="R$"
+              decimalScale={2}
+              decimalSeparator=","
+              variant="outlined"
               fullWidth
               id="outlined-adornment-amount"
-              startAdornment={
-                <InputAdornment position="start">R$</InputAdornment>
-              }
-              label="budget"
+              label="Valor"
               name="budget"
               onChange={handleChange}
               value={budget}
