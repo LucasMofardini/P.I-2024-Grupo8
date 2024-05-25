@@ -16,20 +16,20 @@ public class HistoryRegisterService : IHistoryRegisterService
         _context = context;
     }
         
-    public void AddHistoryByCode(HistoryRegisterDTO dto)
+    public void AddHistoryByCode(HistoryRegisterCreateDTO createDto)
     {
-        var project = GetProjectByCode(dto.ProjectCode);
+        var project = GetProjectByCode(createDto.ProjectCode);
 
         if (project is null)
-            throw new Exception($"Projeto não encontrado {dto.ProjectCode}");
+            throw new Exception($"Projeto não encontrado {createDto.ProjectCode}");
 
         var history = new HistoryRegister
         {
             ProjectId = project.Id,
-            Amount = dto.Amount,
-            Date = dto.Date, 
-            Description = dto.Description,
-            CategoryId = dto.CategoryId,
+            Amount = createDto.Amount,
+            Date = createDto.Date, 
+            Description = createDto.Description,
+            CategoryId = createDto.CategoryId,
             LastUpdatedDateTime = TimeUtils.GetBrazilianUtcNow()
         };
         
@@ -69,9 +69,58 @@ public class HistoryRegisterService : IHistoryRegisterService
         _context.SaveChanges();
     }
 
+    public HistoryDTO ListHistories(int projectId)
+    {
+        var histories= _context.HistoryRegister.Where(x => x.ProjectId == projectId).ToList();
+
+        if (!histories.Any())
+            return new HistoryDTO();
+
+        var project = GetProjectById(projectId);
+
+        if (project is null)
+            return new HistoryDTO();
+        
+        var groupedByMonth = histories.GroupBy(x => x.Date.Month).ToList();
+
+        var historyBalances = new List<HistoryBalance>();
+
+        var projectBalance = project.Budget;
+            
+        foreach (var history in groupedByMonth.OrderBy(x => x.Key))
+        {
+            var amount = history.Sum(x => x.Amount);
+            var balance = projectBalance - amount;
+
+            projectBalance = balance;
+                          
+            historyBalances.Add(new HistoryBalance()
+            {
+                Amount = amount,
+                Balance = balance,
+                Month = history.Key
+            });
+        }
+        
+        var historiesDescending = histories.OrderByDescending(x => x.Date);
+        
+        var dto = new HistoryDTO();
+
+        dto.HistoryItems = historiesDescending.ToList();
+        dto.HistoriesBalance = historyBalances;
+        dto.FinalBalance = projectBalance;
+
+        return dto;
+    }
+
     private Domain.Project? GetProjectByCode(string code)
     {
         return _context.Project.FirstOrDefault(x => x.Code == code);
+    }
+    
+    private Domain.Project? GetProjectById(int id)
+    {
+        return _context.Project.FirstOrDefault(x => x.Id == id);
     }
     
     private HistoryRegister? GetHistoryById(int id)

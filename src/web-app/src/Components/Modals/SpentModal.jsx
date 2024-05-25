@@ -48,7 +48,7 @@ const SpentModal = ({ modal, handleClose, handleChange, onSend, calendarDate }) 
             >
               <MenuItem value={1}>Alimentação</MenuItem>
               <MenuItem value={2}>Viagem</MenuItem>
-              <MenuItem value={4}>Produtos</MenuItem>
+              <MenuItem value={3}>Produtos</MenuItem>
             </Select>
           </FormControl>
 

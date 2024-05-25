@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Project from "./Components/Project/Project";
-import AddProjectButton from "./Components/Buttons/AddProjectButton";
-import NewProjectModal from "./Components/Modals/NewProjectModal";
-import { getData } from "./Services/project.service";
+import Project from "./Project";
+import AddProjectButton from "../Buttons/AddProjectButton";
+import NewProjectModal from "../Modals/NewProjectModal";
+import { getData } from "../../Services/project.service";
 import { Toolbar } from "@mui/material";
-import { postData } from "./Services/project.service";
-import SimpleAlert from "./Components/SimpleAlert";
+import { postData } from "../../Services/project.service";
+import SimpleAlert from "../Common/SimpleAlert";
 
 const newProjectDefault = {
+  id: null,
   name: "",
   budget: null,
-  code: ""
+  code: "",
 };
 
 const alertDefault = {
   show: false,
-  message: '',
-  severity: 'success'
-}
+  message: "",
+  severity: "success",
+};
 
 const ProjectContainer = () => {
   const [projects, setProjects] = useState([]);
@@ -36,38 +37,37 @@ const ProjectContainer = () => {
   };
 
   const onCreateNewProject = async () => {
-    try{
-      setAlert(alertDefault)
+    try {
+      setAlert(alertDefault);
 
       var res = await postData("/Project", {
         code: newProjectModal.code,
         name: newProjectModal.name,
-        budget: newProjectModal.budget
+        budget: newProjectModal.budget,
       });
 
-      setAlert({ show: true, message: res, severity: "success" })
+      setAlert({ show: true, message: res, severity: "success" });
 
       getProducts();
-    }catch(e){
+    } catch (e) {
       console.error(e);
-      console.log(e.request.response)
 
-      setAlert({ show: true, message: e?.request?.response ?? "Erro ao criar projeto", severity: "error" })
-
-    }finally{
-      toggleModal()
+      setAlert({
+        show: true,
+        message: e?.request?.response ?? "Erro ao criar projeto",
+        severity: "error",
+      });
+    } finally {
+      toggleModal();
       setNewProjectModal(newProjectDefault);
     }
-
   };
 
   const getProducts = async () => {
     try {
       const res = await getData("/Project");
-      
-      setProjects(res);
-      console.log(res);
 
+      setProjects(res);
     } catch (error) {
       console.log(error);
     }
@@ -94,7 +94,9 @@ const ProjectContainer = () => {
         onSend={onCreateNewProject}
       />
 
-    {alert.show && <SimpleAlert message={alert.message} severity={alert.severity} /> }
+      {alert.show && (
+        <SimpleAlert message={alert.message} severity={alert.severity} />
+      )}
     </>
   );
 };

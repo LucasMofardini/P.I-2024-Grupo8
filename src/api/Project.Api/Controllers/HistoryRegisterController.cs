@@ -15,12 +15,26 @@ public class HistoryRegisterController : ControllerBase
         _historyRegisterService = historyRegisterService;
     }
 
-    [HttpPost(Name = "AddHistoryByProjectId")]
-    public IActionResult AddHistoryByCode([FromBody] HistoryRegisterDTO dto)
+    [HttpGet(Name = "ListHistoriesByProjectId")]
+    public IActionResult ListHistoriesByProjectId([FromQuery] int id)
     {
         try
         {
-            _historyRegisterService.AddHistoryByCode(dto);
+            return Ok(_historyRegisterService.ListHistories(id));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpPost(Name = "AddHistoryByProjectId")]
+    public IActionResult AddHistoryByCode([FromBody] HistoryRegisterCreateDTO createDto)
+    {
+        try
+        {
+            _historyRegisterService.AddHistoryByCode(createDto);
             
             return Ok("Histórico adicionado com sucesso");
         }

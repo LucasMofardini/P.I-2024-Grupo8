@@ -12,7 +12,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import * as utils from '../../Utils/generic';
 
 const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => {
-    const { name, budget } = info;
+    const { name, budget, code } = info;
     
     return (
       <Modal
@@ -34,7 +34,7 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
             p: 4,
           }}
         >
-          <Typography variant="h4">Novo Projeto</Typography>
+          <Typography variant="h5">Novo Projeto</Typography>
 
           <TextField
             fullWidth
@@ -47,6 +47,19 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
             sx={{ mt: "10px" }}
             onChange={handleChange}
             value={name}
+          />
+
+          <TextField
+            fullWidth
+            multiline
+            minRows={2}
+            id="outlined-basic"
+            label="Codigo"
+            variant="outlined"
+            name="code"
+            sx={{ mt: "10px" }}
+            onChange={handleChange}
+            value={code}
           />
 
           <FormControl fullWidth sx={{ m: 1 }}>

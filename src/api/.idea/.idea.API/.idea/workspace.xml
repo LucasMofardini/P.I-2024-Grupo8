@@ -20,12 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13ee15cb-73e2-4afa-90c4-50039adf162e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterUpdateDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project.Application/DTOs/HistoryDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/.env.prod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/Common/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/Common/NavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/Common/SimpleAlert.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/History/Histories.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/History/HistoriesBalance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/History/History.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/History/HistoryBalance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Components/Project/ProjectContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Services/project.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web-app/src/Utils/consts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/Controllers/HistoryRegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/Controllers/HistoryRegisterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Api/Controllers/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/Controllers/ProjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/bin/Debug/net6.0/Project.API.pdb" afterDir="false" />
@@ -44,12 +53,9 @@
       <change beforePath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/ref/Project.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/ref/Project.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/refint/Project.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Api/obj/Debug/net6.0/refint/Project.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Application/DTOs/ProjectDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/DTOs/ProjectDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterCreateDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/Interfaces/IHistoryRegisterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/Interfaces/IHistoryRegisterService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Application/Interfaces/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/Interfaces/IProjectService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/Services/HistoryRegisterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/Services/HistoryRegisterService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.Application/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/Services/ProjectService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/bin/Debug/net6.0/Project.Domain.dll" afterDir="false" />
@@ -65,6 +71,7 @@
       <change beforePath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/Project.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/Project.Application.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/ref/Project.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/ref/Project.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/refint/Project.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Application/obj/Debug/net6.0/refint/Project.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.Domain/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Domain/Project.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Domain/bin/Debug/net6.0/Project.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Domain/bin/Debug/net6.0/Project.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Domain/bin/Debug/net6.0/Project.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Domain/bin/Debug/net6.0/Project.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Domain/obj/Debug/net6.0/Project.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Domain/obj/Debug/net6.0/Project.Domain.AssemblyInfo.cs" afterDir="false" />
@@ -86,9 +93,15 @@
       <change beforePath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/Project.Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/Project.Infrastructure.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/ref/Project.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/ref/Project.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/refint/Project.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project.Infrastructure/obj/Debug/net6.0/refint/Project.Infrastructure.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web-app/src/ProjectContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/ProjectContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/Footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/Modals/NewProjectModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/Components/Modals/NewProjectModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/Modals/SpentModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/Components/Modals/SpentModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/NavBar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/Project/Project.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/Components/Project/Project.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Components/Project/ProjectHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/Components/Project/ProjectHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/ProjectContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web-app/src/Utils/generic.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app/src/Utils/generic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +119,15 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/1d696053fcd6735aaac1902afdb0b92edbf43e71/src/Mvc/Mvc/src/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/1d696053fcd6735aaac1902afdb0b92edbf43e71/src/Security/Authorization/Policy/src/AuthorizationAppBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/97d8f4cade971b93794a3805e7d72ee388f14c9b/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/97d8f4cade971b93794a3805e7d72ee388f14c9b/src/libraries/System.Linq/src/System/Linq/Lookup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/97d8f4cade971b93794a3805e7d72ee388f14c9b/src/libraries/System.Linq/src/System/Linq/Sum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/97d8f4cade971b93794a3805e7d72ee388f14c9b/src/libraries/System.Private.CoreLib/src/System/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/97d8f4cade971b93794a3805e7d72ee388f14c9b/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/219dd07a5017454c8ec2d6e49493686b83510/26/f5806786/IGrouping`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46ca3fd9512441bb92639be7b53d2e7e18110/d8/e6d74b28/HealthCheckServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba9f9dac0de94c1aa3b719135eb4f95a3adaa0/57/4c8cfed0/IOrderedQueryable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba9f9dac0de94c1aa3b719135eb4f95a3adaa0/86/c4a11d8b/IQueryable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba9f9dac0de94c1aa3b719135eb4f95a3adaa0/f0/044dde14/IQueryable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44cad551704bc7dae78cc7717b8b9f9313582aa8e67a6585a69de0cc33b4b8/IServiceCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
@@ -118,7 +137,7 @@
     <setting file="file://$PROJECT_DIR$/Project.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.API/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project.Application/DTOs/HistoryRegisterCreateDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.Application/DTOs/ProjectDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.Application/Interfaces/IHistoryRegisterService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.Application/Interfaces/IProjectService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -351,7 +370,8 @@
       <workItem from="1716339445015" duration="7793000" />
       <workItem from="1716347354177" duration="9079000" />
       <workItem from="1716508859916" duration="824000" />
-      <workItem from="1716516278007" duration="3424000" />
+      <workItem from="1716516278007" duration="4196000" />
+      <workItem from="1716592709623" duration="19735000" />
     </task>
     <task id="LOCAL-00001" summary="- Project Controller and Project Service.&#10;- HistoryRegister Controller and HistoryRegister Service&#10;- Transform in DDD &#10;- Conect With DB MYSQL">
       <option name="closed" value="true" />
@@ -361,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716174668703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Arrumando Erro de CORS">
+      <option name="closed" value="true" />
+      <created>1716522553389</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716522553390</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +410,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="- Project Controller and Project Service.&#10;- HistoryRegister Controller and HistoryRegister Service&#10;- Transform in DDD &#10;- Conect With DB MYSQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Project Controller and Project Service.&#10;- HistoryRegister Controller and HistoryRegister Service&#10;- Transform in DDD &#10;- Conect With DB MYSQL" />
+    <MESSAGE value="- Arrumando Erro de CORS" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Arrumando Erro de CORS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -398,10 +427,10 @@
           <line>41</line>
           <properties documentPath="C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\api\Project.Application\Services\HistoryRegisterService.cs" initialLine="41" containingFunctionPresentation="Method 'DeleteHistoryById'">
             <startOffsets>
-              <option value="1135" />
+              <option value="1183" />
             </startOffsets>
             <endOffsets>
-              <option value="1168" />
+              <option value="1216" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
@@ -424,28 +453,20 @@
           <line>52</line>
           <properties documentPath="C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\api\Project.Application\Services\HistoryRegisterService.cs" initialLine="52" containingFunctionPresentation="Method 'UpdateHistory'">
             <startOffsets>
-              <option value="1460" />
+              <option value="1508" />
             </startOffsets>
             <endOffsets>
-              <option value="1497" />
+              <option value="1545" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project.Application/Services/HistoryRegisterService.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\api\Project.Application\Services\HistoryRegisterService.cs" initialLine="20" containingFunctionPresentation="Method 'AddHistoryByCode'">
-            <startOffsets>
-              <option value="515" />
-            </startOffsets>
-            <endOffsets>
-              <option value="563" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="&#10;            throw new Exception($&quot;Projeto não encontrado {dto.ProjectCode}&quot;);&#10;&#10;        var history = new HistoryRegister&#10;        {&#10;            ProjectId = project.Id,&#10;            Amount = dto.Amount,&#10;            Date = dto.Date, &#10;            Description = dto.Description,&#10;            CategoryId = dto.CategoryId," />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

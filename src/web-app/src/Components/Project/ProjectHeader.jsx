@@ -2,11 +2,18 @@ import React from "react";
 import { Box, Typography }  from "@mui/material";
 import * as utils from '../../Utils/generic';
 
-const ProjectHeader = ({ name, budget }) => (
-  <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-    <Typography variant="h6">
-      Projeto {name} - {utils.formatCurrency(budget)}
+const ProjectHeader = ({ name, budget, balance }) => (
+  <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+    <Typography sx={{ my: 2, fontSize: 14 }}>
+      {name} - {utils.formatCurrency(budget)}
     </Typography>
+
+    <Box>
+    <Typography sx={{ my: 2, fontSize: 14 }}>
+       <i style={{}}>Saldo Final - </i> {utils.formatCurrency(balance)}
+    </Typography>
+    </Box>
+
   </Box>
 );
 

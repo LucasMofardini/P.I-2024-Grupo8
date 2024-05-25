@@ -1,6 +1,6 @@
 namespace Project.Application.DTOs;
 
-public class HistoryRegisterDTO
+public class HistoryRegisterCreateDTO
 {
     public string ProjectCode { get; set; }
     public int? CategoryId { get; set; }

@@ -13,6 +13,21 @@ export function dateFormat(date) {
   return `${dd}/${mm}/${yyyy}`;
 }
 
+export function formatDateToIso(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day].join('-');
+}
+
+
 export function formatCurrency(decimal) {
   if (!decimal) return null;
 
@@ -22,4 +37,28 @@ export function formatCurrency(decimal) {
   });
   
   return BRLCurrency.format(decimal);
+}
+
+
+export function formatMonth(numb) {
+  if (!numb) return null;
+  
+  var months = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+
+  var selectedMonthName = months[numb - 1];
+
+  return selectedMonthName;
 }
