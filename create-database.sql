@@ -1,0 +1,18 @@
+CREATE DATABASE data_critical;
+
+CREATE TABLE HistoryRegister (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    ProjectId INT NOT NULL,
+    CategoryId INT NULL,
+    Description VARCHAR(255) NOT NULL,
+    Amount DECIMAL(18, 2) NOT NULL,
+    Date DATETIME NOT NULL,
+    LastUpdatedDateTime DATETIME NOT NULL
+);
+
+CREATE TABLE Project (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Code VARCHAR(50) NOT NULL,
+    Name VARCHAR(255) NOT NULL,
+    Budget DECIMAL(18, 2) NOT NULL
+);
