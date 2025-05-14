@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Domain\\Project.Domain.csproj": {}
+    "C:\\Users\\lucas\\OneDrive\\Documentos\\Projects\\P.I-2024-Grupo8\\src\\api\\Project.Domain\\Project.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Domain\\Project.Domain.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Documentos\\Projects\\P.I-2024-Grupo8\\src\\api\\Project.Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Domain\\Project.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Documentos\\Projects\\P.I-2024-Grupo8\\src\\api\\Project.Domain\\Project.Domain.csproj",
         "projectName": "Project.Domain",
-        "projectPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Domain\\Project.Domain.csproj",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Documentos\\Projects\\P.I-2024-Grupo8\\src\\api\\Project.Domain\\Project.Domain.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\Desktop\\P.I-2024-Grupo8\\src\\API\\Project.Domain\\obj\\",
+        "outputPath": "C:\\Users\\lucas\\OneDrive\\Documentos\\Projects\\P.I-2024-Grupo8\\src\\api\\Project.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -41,6 +47,10 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
             },
@@ -71,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.105\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

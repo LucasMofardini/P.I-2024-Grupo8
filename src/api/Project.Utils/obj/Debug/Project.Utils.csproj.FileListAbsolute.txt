@@ -4,3 +4,9 @@ C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Utils\obj\Debug\Project.U
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Utils\obj\Debug\Project.Utils.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Utils\obj\Debug\Project.Utils.dll
 C:\Users\lucas\Desktop\P.I-2024-Grupo8\src\API\Project.Utils\obj\Debug\Project.Utils.pdb
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\obj\Debug\Project.Utils.dll
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\obj\Debug\Project.Utils.pdb
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\bin\Debug\Project.Utils.dll
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\bin\Debug\Project.Utils.pdb
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\obj\Debug\Project.Utils.csproj.AssemblyReference.cache
+C:\Users\lucas\OneDrive\Documentos\Projects\P.I-2024-Grupo8\src\api\Project.Utils\obj\Debug\Project.Utils.csproj.CoreCompileInputs.cache

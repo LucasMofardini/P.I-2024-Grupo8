@@ -9,7 +9,7 @@ const HistoriesBalance = ({ histories }) => {
     <Box>
       <Stack spacing={1} sx={{ maxHeight: 300, overflowY: "scroll", mx: 1 }}>
         {!!histories.length &&
-          histories.map((history) => <HistoryBalance history={history} />)}
+          histories.map((history, i) => <HistoryBalance key={i} history={history} />)}
 
         {!histories.length && (
            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

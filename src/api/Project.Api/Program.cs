@@ -7,8 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("ProjectConnection");
 
-builder.Services.AddDbContext<Context>(opts =>
-    opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+//builder.Services.AddDbContext<Context>(opts =>
+//    opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IHistoryRegisterService, HistoryRegisterService>();

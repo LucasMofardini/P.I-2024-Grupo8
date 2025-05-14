@@ -50,7 +50,8 @@ function NavBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color={"success"}>
+
+      <AppBar component="nav" color={"warning"}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -66,7 +67,7 @@ function NavBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            DataCritical
+            North Tech Security
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {/* {navItems.map((item) => (

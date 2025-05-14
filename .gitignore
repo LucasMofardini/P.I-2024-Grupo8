@@ -1,0 +1,76 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+*.code-workspace
+
+## Rider
+.idea/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Log files
+*.log
+
+## DotNet specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+# Uncomment if using package directory instead of global packages folder
+# *.sln.packages
+
+## Entity Framework
+Migrations/
+
+## Azure functions
+.local.settings.json
+
+## Secrets
+secrets.json
+
+## Others
+*.db
+*.sqlite
+*.pdb
+*.cache
+*.tmp
+*.bak
+
+## Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Publish directory
+publish/
+wwwroot/
+
+## Configuration transforms
+appsettings.*.json
+!appsettings.json
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+.vs/
+.vscode/
+.idea/
