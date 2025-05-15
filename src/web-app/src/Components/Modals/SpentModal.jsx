@@ -78,12 +78,13 @@ const SpentModal = ({
               name="category"
               onChange={handleChange}
             >
-              <MenuItem value={1}>Alimentação</MenuItem>
+              <MenuItem value={1}>Equipamento</MenuItem>
               <MenuItem value={2}>Viagem</MenuItem>
               <MenuItem value={3}>Produtos</MenuItem>
-              <MenuItem value={4}>Combustivel</MenuItem>
-              <MenuItem value={5}>Cursos</MenuItem>
-              <MenuItem value={6}>Equipamentos T.I</MenuItem>
+              <MenuItem value={4}>Instalação</MenuItem>
+              <MenuItem value={5}>Equipamentos T.I</MenuItem>
+              <MenuItem value={6}>Mão de Obra</MenuItem>
+
             </Select>
           </FormControl>
           <FormControl fullWidth sx={{ ...sharedStyles }}>
