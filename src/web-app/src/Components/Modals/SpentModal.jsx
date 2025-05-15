@@ -20,11 +20,12 @@ const sharedStyles = {
 const theme = createTheme();
 const useStyles = makeStyles({
   button: {
-    background: "#344d8c",
+    background: "#353935",
     color: "#fff",
     "&:hover": {
-      background: "#425c9e",
-      color: "#fff",
+      background: "#FAF9F6",
+      color: "#353935",
+      border: "1px solid #353935"
     },
   },
 });

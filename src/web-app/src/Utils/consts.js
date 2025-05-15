@@ -1,8 +1,8 @@
 export const categories = {
-    1: 'Alimentação',
+    1: 'Equipamento',
     2: 'Viagem',
     3: 'Produtos',
-    4: 'Combustivel',
-    5: 'Cursos',
-    6: 'Equipamentos T.I'
+    4: 'Instalação',
+    5: 'Equipamentos T.I',
+    6: 'Mão de Obra'
 };

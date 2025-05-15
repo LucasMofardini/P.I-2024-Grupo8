@@ -11,10 +11,27 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import * as utils from '../../Utils/generic';
 import { NumericFormat } from "react-number-format";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  button: {
+    background: "#ed6c02",
+    color: "#353935",
+    border: "1px solid #353935",
+    "&:hover": {
+      background: "#FAF9F6",
+      color: "#353935",
+      border: "1px solid #353935"
+    },
+  },
+});
+
 
 const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => {
     const { name, budget, code } = info;
-    
+
+    const classes = useStyles();
+
     return (
       <Modal
         open={open}
@@ -78,14 +95,21 @@ const NewProjectModal = ({ open, info, handleChange, handleClose, onSend  }) => 
               variant="outlined"
               fullWidth
               id="outlined-adornment-amount"
-              label="Valor"
+              label="Orçamento"
               name="budget"
               onChange={handleChange}
               value={budget}
             />
           </FormControl>
 
-          <Button onClick={onSend}>Salvar</Button>
+          <Button
+              className={classes.button}
+              fullWidth
+              sx={{ mt: 4, display: "flex", justifyContent: "center" }}            
+              onClick={onSend}
+          >
+            Salvar
+          </Button>
         </Box>
       </Modal>
     );

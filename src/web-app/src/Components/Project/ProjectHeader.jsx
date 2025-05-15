@@ -10,7 +10,7 @@ const ProjectHeader = ({ name, budget, balance }) => (
 
     <Box>
     <Typography sx={{ my: 2, fontSize: 14 }}>
-       <i style={{}}>Saldo Final - </i> {utils.formatCurrency(balance)}
+       <i>Valor Restante - </i> {utils.formatCurrency(balance)}
     </Typography>
     </Box>
 
